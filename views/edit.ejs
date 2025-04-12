@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <style>
+        img{
+            height:400px;
+            
+        }
+        @media (max-width: 768px) {
+      img {
+       height: 360px;
+      }
+    }
+    </style>
+   
+</head>
+<body>
+    <h1 class="text-center mb-4">Edit post</h1>
+   
+    <div class="card mb-3" style="max-width: 540px; margin: auto;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="https://www.sapphirewebsolutions.com/wp-content/uploads/2019/09/Web-Development-Trends.jpg" class="img rounded" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    
+             <form method="post" action="http://localhost:8080/posts/<%=post.id%>?_method=patch">
+                        <div class="mb-3">
+                         <h3>username : <%=post.username%></h3>
+                       
+                        <div class="mb-3">
+                            <textarea name="content"
+                            class="form-control custom-input" rows="4"> 
+                            <%=post.content%></textarea>
+                        </div>
+                        <input class="btn btn-primary submit-btn" type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
